@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		823F958F2A634A7C00F13778 /* MacDynamicDesktopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F958E2A634A7C00F13778 /* MacDynamicDesktopApp.swift */; };
+		823F95912A634A7C00F13778 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95902A634A7C00F13778 /* ContentView.swift */; };
+		823F95932A634A8200F13778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823F95922A634A8200F13778 /* Assets.xcassets */; };
+		823F95962A634A8200F13778 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823F95952A634A8200F13778 /* Preview Assets.xcassets */; };
+		823F95982A634A8200F13778 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95972A634A8200F13778 /* Persistence.swift */; };
+		823F959B2A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 823F95992A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld */; };
+		823F95A62A634A8200F13778 /* MacDynamicDesktopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95A52A634A8200F13778 /* MacDynamicDesktopTests.swift */; };
+		823F95B02A634A8200F13778 /* MacDynamicDesktopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95AF2A634A8200F13778 /* MacDynamicDesktopUITests.swift */; };
+		823F95B22A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		823F95A22A634A8200F13778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 823F95832A634A7C00F13778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 823F958A2A634A7C00F13778;
+			remoteInfo = MacDynamicDesktop;
+		};
+		823F95AC2A634A8200F13778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 823F95832A634A7C00F13778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 823F958A2A634A7C00F13778;
+			remoteInfo = MacDynamicDesktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		823F958B2A634A7C00F13778 /* MacDynamicDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacDynamicDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F958E2A634A7C00F13778 /* MacDynamicDesktopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopApp.swift; sourceTree = "<group>"; };
+		823F95902A634A7C00F13778 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		823F95922A634A8200F13778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		823F95952A634A8200F13778 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		823F95972A634A8200F13778 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		823F959A2A634A8200F13778 /* MacDynamicDesktop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacDynamicDesktop.xcdatamodel; sourceTree = "<group>"; };
+		823F959C2A634A8200F13778 /* MacDynamicDesktop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacDynamicDesktop.entitlements; sourceTree = "<group>"; };
+		823F95A12A634A8200F13778 /* MacDynamicDesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacDynamicDesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F95A52A634A8200F13778 /* MacDynamicDesktopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopTests.swift; sourceTree = "<group>"; };
+		823F95AB2A634A8200F13778 /* MacDynamicDesktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacDynamicDesktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		823F95AF2A634A8200F13778 /* MacDynamicDesktopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopUITests.swift; sourceTree = "<group>"; };
+		823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		823F95882A634A7C00F13778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F959E2A634A8200F13778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F95A82A634A8200F13778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		823F95822A634A7C00F13778 = {
+			isa = PBXGroup;
+			children = (
+				823F958D2A634A7C00F13778 /* MacDynamicDesktop */,
+				823F95A42A634A8200F13778 /* MacDynamicDesktopTests */,
+				823F95AE2A634A8200F13778 /* MacDynamicDesktopUITests */,
+				823F958C2A634A7C00F13778 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		823F958C2A634A7C00F13778 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				823F958B2A634A7C00F13778 /* MacDynamicDesktop.app */,
+				823F95A12A634A8200F13778 /* MacDynamicDesktopTests.xctest */,
+				823F95AB2A634A8200F13778 /* MacDynamicDesktopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		823F958D2A634A7C00F13778 /* MacDynamicDesktop */ = {
+			isa = PBXGroup;
+			children = (
+				823F958E2A634A7C00F13778 /* MacDynamicDesktopApp.swift */,
+				823F95902A634A7C00F13778 /* ContentView.swift */,
+				823F95922A634A8200F13778 /* Assets.xcassets */,
+				823F95972A634A8200F13778 /* Persistence.swift */,
+				823F959C2A634A8200F13778 /* MacDynamicDesktop.entitlements */,
+				823F95992A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld */,
+				823F95942A634A8200F13778 /* Preview Content */,
+			);
+			path = MacDynamicDesktop;
+			sourceTree = "<group>";
+		};
+		823F95942A634A8200F13778 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				823F95952A634A8200F13778 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		823F95A42A634A8200F13778 /* MacDynamicDesktopTests */ = {
+			isa = PBXGroup;
+			children = (
+				823F95A52A634A8200F13778 /* MacDynamicDesktopTests.swift */,
+			);
+			path = MacDynamicDesktopTests;
+			sourceTree = "<group>";
+		};
+		823F95AE2A634A8200F13778 /* MacDynamicDesktopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				823F95AF2A634A8200F13778 /* MacDynamicDesktopUITests.swift */,
+				823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */,
+			);
+			path = MacDynamicDesktopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		823F958A2A634A7C00F13778 /* MacDynamicDesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823F95B52A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktop" */;
+			buildPhases = (
+				823F95872A634A7C00F13778 /* Sources */,
+				823F95882A634A7C00F13778 /* Frameworks */,
+				823F95892A634A7C00F13778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacDynamicDesktop;
+			productName = MacDynamicDesktop;
+			productReference = 823F958B2A634A7C00F13778 /* MacDynamicDesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		823F95A02A634A8200F13778 /* MacDynamicDesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823F95B82A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktopTests" */;
+			buildPhases = (
+				823F959D2A634A8200F13778 /* Sources */,
+				823F959E2A634A8200F13778 /* Frameworks */,
+				823F959F2A634A8200F13778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823F95A32A634A8200F13778 /* PBXTargetDependency */,
+			);
+			name = MacDynamicDesktopTests;
+			productName = MacDynamicDesktopTests;
+			productReference = 823F95A12A634A8200F13778 /* MacDynamicDesktopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		823F95AA2A634A8200F13778 /* MacDynamicDesktopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823F95BB2A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktopUITests" */;
+			buildPhases = (
+				823F95A72A634A8200F13778 /* Sources */,
+				823F95A82A634A8200F13778 /* Frameworks */,
+				823F95A92A634A8200F13778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823F95AD2A634A8200F13778 /* PBXTargetDependency */,
+			);
+			name = MacDynamicDesktopUITests;
+			productName = MacDynamicDesktopUITests;
+			productReference = 823F95AB2A634A8200F13778 /* MacDynamicDesktopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		823F95832A634A7C00F13778 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					823F958A2A634A7C00F13778 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					823F95A02A634A8200F13778 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 823F958A2A634A7C00F13778;
+					};
+					823F95AA2A634A8200F13778 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 823F958A2A634A7C00F13778;
+					};
+				};
+			};
+			buildConfigurationList = 823F95862A634A7C00F13778 /* Build configuration list for PBXProject "MacDynamicDesktop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 823F95822A634A7C00F13778;
+			productRefGroup = 823F958C2A634A7C00F13778 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				823F958A2A634A7C00F13778 /* MacDynamicDesktop */,
+				823F95A02A634A8200F13778 /* MacDynamicDesktopTests */,
+				823F95AA2A634A8200F13778 /* MacDynamicDesktopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		823F95892A634A7C00F13778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F95962A634A8200F13778 /* Preview Assets.xcassets in Resources */,
+				823F95932A634A8200F13778 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F959F2A634A8200F13778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F95A92A634A8200F13778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		823F95872A634A7C00F13778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F95982A634A8200F13778 /* Persistence.swift in Sources */,
+				823F95912A634A7C00F13778 /* ContentView.swift in Sources */,
+				823F959B2A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld in Sources */,
+				823F958F2A634A7C00F13778 /* MacDynamicDesktopApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F959D2A634A8200F13778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F95A62A634A8200F13778 /* MacDynamicDesktopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823F95A72A634A8200F13778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823F95B02A634A8200F13778 /* MacDynamicDesktopUITests.swift in Sources */,
+				823F95B22A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		823F95A32A634A8200F13778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 823F958A2A634A7C00F13778 /* MacDynamicDesktop */;
+			targetProxy = 823F95A22A634A8200F13778 /* PBXContainerItemProxy */;
+		};
+		823F95AD2A634A8200F13778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 823F958A2A634A7C00F13778 /* MacDynamicDesktop */;
+			targetProxy = 823F95AC2A634A8200F13778 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		823F95B32A634A8200F13778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		823F95B42A634A8200F13778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		823F95B62A634A8200F13778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacDynamicDesktop/MacDynamicDesktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacDynamicDesktop/Preview Content\"";
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		823F95B72A634A8200F13778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacDynamicDesktop/MacDynamicDesktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacDynamicDesktop/Preview Content\"";
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		823F95B92A634A8200F13778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacDynamicDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacDynamicDesktop";
+			};
+			name = Debug;
+		};
+		823F95BA2A634A8200F13778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacDynamicDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacDynamicDesktop";
+			};
+			name = Release;
+		};
+		823F95BC2A634A8200F13778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacDynamicDesktop;
+			};
+			name = Debug;
+		};
+		823F95BD2A634A8200F13778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJK5VXSY4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.lk-code.MacDynamicDesktopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacDynamicDesktop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		823F95862A634A7C00F13778 /* Build configuration list for PBXProject "MacDynamicDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F95B32A634A8200F13778 /* Debug */,
+				823F95B42A634A8200F13778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		823F95B52A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F95B62A634A8200F13778 /* Debug */,
+				823F95B72A634A8200F13778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		823F95B82A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F95B92A634A8200F13778 /* Debug */,
+				823F95BA2A634A8200F13778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		823F95BB2A634A8200F13778 /* Build configuration list for PBXNativeTarget "MacDynamicDesktopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823F95BC2A634A8200F13778 /* Debug */,
+				823F95BD2A634A8200F13778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		823F95992A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				823F959A2A634A8200F13778 /* MacDynamicDesktop.xcdatamodel */,
+			);
+			currentVersion = 823F959A2A634A8200F13778 /* MacDynamicDesktop.xcdatamodel */;
+			path = MacDynamicDesktop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 823F95832A634A7C00F13778 /* Project object */;
+}
