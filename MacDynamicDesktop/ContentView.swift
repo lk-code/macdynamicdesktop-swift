@@ -10,20 +10,60 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        VStack {
+                            VStack {
+                                Image(systemName: "sun.max.fill")
+                                    .font(.system(size: 200))
+                                    .frame(maxWidth: .infinity) // Hier wird das Image auf volle Breite gestreckt
+                                    .padding()
+                                    .aspectRatio(16/9, contentMode: .fit)
+                                Text("Aktuelle Vorschau-Grafik")
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            
+                            HStack {
+                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 40)
+                            
+                            HStack {
+                                Text("Slider mit allen Grafiken")
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 120)
+                        }
+                        .frame(maxHeight: .infinity)
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        
+                        VStack {
+                            
+                            HStack {
+                                Image(systemName: "sun.max.fill")
+                                    .font(.system(size: 36))
+                                    .frame(maxWidth: .infinity) // Hier wird das Image auf volle Breite gestreckt
+                                    .padding()
+                                    .aspectRatio(16/9, contentMode: .fit)
+                            }
+                            
+                            HStack {
+                                Text(item.timestamp!, formatter: itemFormatter)
+                                    .font(.caption)
+                            }
+                            .frame(maxWidth: .infinity)
+                            
+                        }
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -38,12 +78,12 @@ struct ContentView: View {
             Text("Select an item")
         }
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -54,11 +94,11 @@ struct ContentView: View {
             }
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
-
+            
             do {
                 try viewContext.save()
             } catch {
