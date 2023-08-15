@@ -23,11 +23,12 @@ struct ContentView: View {
                     NavigationLink {
                         VStack {
                             VStack {
-                                Image(systemName: "sun.max.fill")
-                                    .font(.system(size: 200))
-                                    .frame(maxWidth: .infinity) // Hier wird das Image auf volle Breite gestreckt
+                                Image("win11_light")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(4)
+                                    .frame(maxWidth: .infinity)
                                     .padding()
-                                    .aspectRatio(16/9, contentMode: .fit)
                                 Text("Aktuelle Vorschau-Grafik")
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)

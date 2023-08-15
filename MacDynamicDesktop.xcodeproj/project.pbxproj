@@ -16,6 +16,7 @@
 		823F95A62A634A8200F13778 /* MacDynamicDesktopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95A52A634A8200F13778 /* MacDynamicDesktopTests.swift */; };
 		823F95B02A634A8200F13778 /* MacDynamicDesktopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95AF2A634A8200F13778 /* MacDynamicDesktopUITests.swift */; };
 		823F95B22A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */; };
+		8257BC2A2A8C00F400793168 /* WallpaperPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257BC292A8C00F400793168 /* WallpaperPack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		823F95AB2A634A8200F13778 /* MacDynamicDesktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacDynamicDesktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F95AF2A634A8200F13778 /* MacDynamicDesktopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopUITests.swift; sourceTree = "<group>"; };
 		823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDynamicDesktopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8257BC292A8C00F400793168 /* WallpaperPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperPack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		823F958D2A634A7C00F13778 /* MacDynamicDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				8257BC282A8C00AA00793168 /* Models */,
 				823F958E2A634A7C00F13778 /* MacDynamicDesktopApp.swift */,
 				823F95902A634A7C00F13778 /* ContentView.swift */,
 				823F95922A634A8200F13778 /* Assets.xcassets */,
@@ -133,6 +136,14 @@
 				823F95B12A634A8200F13778 /* MacDynamicDesktopUITestsLaunchTests.swift */,
 			);
 			path = MacDynamicDesktopUITests;
+			sourceTree = "<group>";
+		};
+		8257BC282A8C00AA00793168 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8257BC292A8C00F400793168 /* WallpaperPack.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8257BC2A2A8C00F400793168 /* WallpaperPack.swift in Sources */,
 				823F95982A634A8200F13778 /* Persistence.swift in Sources */,
 				823F95912A634A7C00F13778 /* ContentView.swift in Sources */,
 				823F959B2A634A8200F13778 /* MacDynamicDesktop.xcdatamodeld in Sources */,
