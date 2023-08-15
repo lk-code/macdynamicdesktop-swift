@@ -48,21 +48,21 @@ struct ContentView: View {
                         VStack {
                             
                             HStack {
-                                Image(systemName: "sun.max.fill")
-                                    .font(.system(size: 36))
-                                    .frame(maxWidth: .infinity) // Hier wird das Image auf volle Breite gestreckt
-                                    .padding()
-                                    .aspectRatio(16/9, contentMode: .fit)
+                                Image("win11_light")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: .infinity)
+                                    .cornerRadius(4)
                             }
                             
                             HStack {
                                 Text(item.timestamp!, formatter: itemFormatter)
                                     .font(.caption)
+                                    .padding(.vertical)
                             }
                             .frame(maxWidth: .infinity)
                             
                         }
-                        .padding(.vertical)
                         .frame(maxWidth: .infinity)
                     }
                 }
