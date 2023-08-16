@@ -90,11 +90,23 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
+                
                 ToolbarItem {
+                    
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
                     }
+                    
                 }
+                
+                ToolbarItem {
+                    
+                    Button(action: deleteItem) {
+                        Label("Delete Item", systemImage: "trash")
+                    }
+                    
+                }
+                
             }
             Text("Select an item")
         }
@@ -114,6 +126,10 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }
+    
+    private func deleteItem() {
+        
     }
     
     private func deleteItems(offsets: IndexSet) {
