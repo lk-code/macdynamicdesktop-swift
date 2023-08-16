@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import MacDynamicDesktop
 
 final class MacDynamicDesktopTests: XCTestCase {
 

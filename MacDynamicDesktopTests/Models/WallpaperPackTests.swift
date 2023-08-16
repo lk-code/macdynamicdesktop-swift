@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import MacDynamicDesktop
 
 final class WallpaperPackTests: XCTestCase {
     
