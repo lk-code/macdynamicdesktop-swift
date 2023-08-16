@@ -7,10 +7,19 @@
 
 import Foundation
 
-class WallpaperPack {
-    var Name: String = "";
+class WallpaperPack: Identifiable {
+    var Name: String
+    var Images: [String]
+    var PreviewImage: String
     
-    init(name: String) {
+    init(name: String, images: [String], previewImage: String? = nil) {
         Name = name;
+        Images = images
+        
+        if previewImage == nil, let firstImage = images.first {
+            PreviewImage = firstImage
+        } else {
+            PreviewImage = previewImage!
+        }
     }
 }

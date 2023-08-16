@@ -8,7 +8,10 @@
 import SwiftUI
 import CoreData
 
-private let images = ["win11_light", "win11_dark"]
+private let wallpaperPacks: [WallpaperPack] = [
+    WallpaperPack(name: "Windows 11", images: ["win11_light", "win11_dark"], previewImage: "win11_dark"),
+    WallpaperPack(name: "Windows 10", images: ["win11_light", "win11_dark"]),
+]
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -24,7 +27,7 @@ struct ContentView: View {
             
             List {
                 
-                ForEach(items) { item in
+                ForEach(wallpaperPacks) { wallpaperPack in
                     
                     NavigationLink {
                         
@@ -33,22 +36,21 @@ struct ContentView: View {
                         ], spacing: 16) {
                             
                             HStack {
-                                Text("Vorschau-Grafik")
-                                    .frame(height: .infinity)
+                                Image(wallpaperPack.PreviewImage)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .cornerRadius(4)
                             }
                             .frame(maxWidth: .infinity)
-                            .background(Color.red)
-                            .foregroundColor(.white)
                             .cornerRadius(10)
                             
                             
                             HStack {
-                                Text("Paket-Name")
+                                Text(wallpaperPack.Name)
                                     .frame(height: 40)
+                                    .font(.title)
                             }
                             .frame(maxWidth: .infinity)
-                            .background(Color.green)
-                            .foregroundColor(.white)
                             .cornerRadius(10)
                             
                             HStack {
@@ -56,11 +58,8 @@ struct ContentView: View {
                                     .frame(height: 120)
                             }
                             .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
                             .cornerRadius(10)
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding()
                         
                     } label: {
@@ -68,15 +67,17 @@ struct ContentView: View {
                         VStack {
                             
                             HStack {
-                                Image("win11_light")
+                                
+                                Image(wallpaperPack.PreviewImage)
                                     .resizable()
                                     .scaledToFill()
                                     .cornerRadius(4)
+                                
                             }
                             
                             HStack {
                                 
-                                Text(item.timestamp!, formatter: itemFormatter)
+                                Text(wallpaperPack.Name)
                                     .font(.caption)
                                     .padding(.vertical)
                                 
@@ -85,7 +86,9 @@ struct ContentView: View {
                             
                         }
                         .frame(maxWidth: .infinity)
+                        
                     }
+                    
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -108,6 +111,7 @@ struct ContentView: View {
                 }
                 
             }
+            
             Text("Select an item")
         }
     }
@@ -147,13 +151,6 @@ struct ContentView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
