@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreData
 
+private let images = ["win11_light", "win11_dark"]
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -26,31 +28,41 @@ struct ContentView: View {
                     
                     NavigationLink {
                         
-                        VStack {
-                            
-                            VStack {
-                                
-                                Image("win11_light")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .cornerRadius(4)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                Text("Aktuelle Vorschau-Grafik")
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        LazyVGrid(columns: [
+                            GridItem(.flexible()),
+                        ], spacing: 16) {
                             
                             HStack {
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                Text("Vorschau-Grafik")
+                                    .frame(height: .infinity)
                             }
-                            .frame(maxWidth: .infinity, maxHeight: 40)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            
                             
                             HStack {
-                                Text("Slider mit allen Grafiken")
+                                Text("Paket-Name")
+                                    .frame(height: 40)
                             }
-                            .frame(maxWidth: .infinity, maxHeight: 120)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            
+                            HStack {
+                                Text("Grafik-Slider")
+                                    .frame(height: 120)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                         }
-                        .frame(maxHeight: .infinity)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding()
+                        
                     } label: {
                         
                         VStack {
@@ -58,15 +70,16 @@ struct ContentView: View {
                             HStack {
                                 Image("win11_light")
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(maxWidth: .infinity)
+                                    .scaledToFill()
                                     .cornerRadius(4)
                             }
                             
                             HStack {
+                                
                                 Text(item.timestamp!, formatter: itemFormatter)
                                     .font(.caption)
                                     .padding(.vertical)
+                                
                             }
                             .frame(maxWidth: .infinity)
                             
