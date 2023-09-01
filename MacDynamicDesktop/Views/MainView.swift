@@ -19,95 +19,118 @@ struct MainView: View {
         
         NavigationView {
             
-            List {
+            Sidebar()
+            
+            Text("Select an item")
+        }
+        .navigationTitle("MacDynamicDesktop")
+        .toolbar {
+            
+            ToolbarItem() {
                 
-                ForEach(wallpaperPacks) { wallpaperPack in
-                    
-                    NavigationLink {
-                        
-                        LazyVGrid(columns: [
-                            GridItem(.flexible()),
-                        ], spacing: 16) {
-                            
-                            HStack {
-                                Image(wallpaperPack.PreviewImage)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .cornerRadius(4)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .cornerRadius(10)
-                            
-                            
-                            HStack {
-                                Text(wallpaperPack.Name)
-                                    .frame(height: 40)
-                                    .font(.title)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .cornerRadius(10)
-                            
-                            HStack {
-                                Text("Grafik-Slider")
-                                    .frame(height: 120)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .cornerRadius(10)
-                        }
-                        .padding()
-                        
-                    } label: {
-                        
-                        VStack {
-                            
-                            HStack {
-                                
-                                Image(wallpaperPack.PreviewImage)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .cornerRadius(4)
-                                
-                            }
-                            
-                            HStack {
-                                
-                                Text(wallpaperPack.Name)
-                                    .font(.caption)
-                                    .padding(.vertical)
-                                
-                            }
-                            .frame(maxWidth: .infinity)
-                            
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                    }
-                    
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                
-                ToolbarItem {
-                    
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                    
-                }
-                
-                ToolbarItem {
-                    
-                    Button(action: deleteItem) {
-                        Label("Delete Item", systemImage: "trash")
-                    }
-                    
+                Button(action: openInfo) {
+                    Label("info", systemImage: "info.circle")
                 }
                 
             }
             
-            Text("Select an item")
         }
+    }
+    
+    private func openInfo() {
+        
+        withAnimation {
+            
+        }
+    }
+}
+
+struct Sidebar: View {
+    
+    var body: some View {
+        
+        List {
+            
+            ForEach(wallpaperPacks) { wallpaperPack in
+                
+                NavigationLink {
+                    
+                    LazyVGrid(columns: [
+                        GridItem(.flexible()),
+                    ], spacing: 16) {
+                        
+//                        HStack {
+//                            Image(wallpaperPack.PreviewImage)
+//                                .resizable()
+//                                .scaledToFill()
+//                                .cornerRadius(4)
+//                        }
+//                        .frame(maxWidth: .infinity)
+//                        .cornerRadius(10)
+                        
+                        
+                        HStack {
+                            Text(wallpaperPack.Name)
+                                .frame(height: 40)
+                                .font(.title)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(10)
+                        
+                        HStack {
+                            Text("Grafik-Slider")
+                                .frame(height: 120)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(10)
+                    }
+                    .background(
+                        Image(wallpaperPack.PreviewImage)
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fill)
+                            .edgesIgnoringSafeArea(.all)
+                    )
+                    
+                } label: {
+                    
+                    VStack {
+                        
+                        Image(wallpaperPack.PreviewImage)
+                            .resizable()
+                            .scaledToFill()
+                            .cornerRadius(4)
+                        
+                        Text(wallpaperPack.Name)
+                            .font(.caption)
+                            .padding(.vertical)
+                        
+                    }
+                    
+                }
+                
+            }
+            .onDelete(perform: deleteItems)
+        }
+        .toolbar {
+            
+            ToolbarItem {
+                
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
+                
+            }
+            
+            ToolbarItem() {
+                
+                Button(action: deleteItem) {
+                    Label("Delete Item", systemImage: "trash")
+                }
+                
+            }
+            
+        }
+        .listStyle(SidebarListStyle())
     }
     
     private func addItem() {
