@@ -49,4 +49,8 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MacDynamicDesktop.Core\MacDynamicDesktop.Core.csproj" />
+    </ItemGroup>
+
 </Project>

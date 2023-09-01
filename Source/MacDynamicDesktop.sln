@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{77
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacDynamicDesktop.Core", "MacDynamicDesktop.Core\MacDynamicDesktop.Core.csproj", "{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{20C9CC49-3A72-486E-B194-88467B5331DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20C9CC49-3A72-486E-B194-88467B5331DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20C9CC49-3A72-486E-B194-88467B5331DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
