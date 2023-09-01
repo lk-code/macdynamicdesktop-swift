@@ -1,0 +1,43 @@
+name: macOS .NET
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+          include-prerelease: true
+
+      - name: Install MAUI Workloads
+        run: |
+          dotnet workload install maccatalyst --ignore-failed-sources
+          dotnet workload install maui --ignore-failed-sources
+
+      - name: Restore Dependencies
+        run: dotnet restore Source/MacDynamicDesktop/MacDynamicDesktop.csproj
+
+      - name: Build MAUI MacCatalyst
+        run: dotnet build Source/MacDynamicDesktop/MacDynamicDesktop.csproj -c Release -f net7.0-maccatalyst --no-restore
+
+      - name: Upload MacCatalyst Artifact
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: macos-ci-build
+          path: Source/MacDynamicDesktop//bin/Release/net7.0-maccatalyst/**/*.app/
