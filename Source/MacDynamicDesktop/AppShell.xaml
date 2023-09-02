@@ -4,11 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MacDynamicDesktop"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:MacDynamicDesktop.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate views:OverviewPage}"
         Route="MainPage" />
 
 </Shell>

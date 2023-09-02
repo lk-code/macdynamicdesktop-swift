@@ -46,11 +46,15 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="FluentMAUI.Configuration" Version="1.0.5" />
+        <PackageReference Include="FluentMAUI.UI" Version="1.0.4" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\MacDynamicDesktop.Core\MacDynamicDesktop.Core.csproj" />
+      <ProjectReference Include="..\MacDynamicDesktop.SharedViewModels\MacDynamicDesktop.SharedViewModels.csproj" />
     </ItemGroup>
+
 
 </Project>

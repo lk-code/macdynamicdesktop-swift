@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{77
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacDynamicDesktop.Core", "MacDynamicDesktop.Core\MacDynamicDesktop.Core.csproj", "{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacDynamicDesktop.SharedViewModels", "MacDynamicDesktop.SharedViewModels\MacDynamicDesktop.SharedViewModels.csproj", "{249B9D38-C428-4DAA-9509-E7FDCF9DA29B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C75412-09B5-41D1-A6B4-ED4A37D9DB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249B9D38-C428-4DAA-9509-E7FDCF9DA29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249B9D38-C428-4DAA-9509-E7FDCF9DA29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249B9D38-C428-4DAA-9509-E7FDCF9DA29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249B9D38-C428-4DAA-9509-E7FDCF9DA29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

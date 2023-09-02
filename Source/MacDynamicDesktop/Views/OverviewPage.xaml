@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MacDynamicDesktop.ViewModels"
+             xmlns:svm="clr-namespace:MacDynamicDesktop.SharedViewModels;assembly=MacDynamicDesktop.SharedViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:fmcontrols="clr-namespace:FluentMAUI.UI.Controls;assembly=FluentMAUI.UI"
+             BackgroundColor="WhiteSmoke"
+             x:Class="MacDynamicDesktop.Views.OverviewPage"
+             x:DataType="vm:OverviewViewModel">
+
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="Appearing"
+            Command="{Binding ViewAppearingCommand}" />
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <!-- <Image x:Name="backgroundImage" -->
+            <!--        Source="/Users/larskramer/Downloads/Rider.png" -->
+            <!--        Aspect="AspectFill" -->
+            <!--        HorizontalOptions="Fill" /> -->
+
+            <Grid ColumnDefinitions="Auto,*"
+                  HorizontalOptions="Fill">
+
+                <CollectionView Grid.Column="0"
+                                WidthRequest="400"
+                                ItemSizingStrategy="MeasureAllItems"
+                                Margin="0,8"
+                                ItemsSource="{Binding WallpaperCollection, Mode=OneWay}">
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate x:DataType="svm:WallpaperArchiveViewModel">
+
+                            <ContentView Margin="0, 8">
+
+                                <Border WidthRequest="384"
+                                        HeightRequest="200"
+                                        StrokeThickness="1">
+                                    
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="12, 12, 12,12" />
+                                    </Border.StrokeShape>
+
+                                    <!-- <Grid HeightRequest="200"> -->
+
+                                        <Image Source="{Binding Thumbnail, Mode=OneWay}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="184"
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="Fill" />
+
+                                    <!--     <Grid HorizontalOptions="Fill" -->
+                                    <!--           VerticalOptions="Start"> -->
+                                    <!-- -->
+                                    <!--         <Label Text="{Binding Name, Mode=OneWay}" -->
+                                    <!--                HorizontalOptions="Fill" -->
+                                    <!--                VerticalOptions="End" /> -->
+                                    <!-- -->
+                                    <!--     </Grid> -->
+                                    <!-- -->
+                                    <!-- </Grid> -->
+
+                                </Border>
+
+                            </ContentView>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <Grid Grid.Column="1"
+                      Background="#88ffff00">
+
+                    <Label Text="{Binding SelectedWallpaper.Name, Mode=OneWay}" />
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

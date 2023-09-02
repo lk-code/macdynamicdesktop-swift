@@ -1,14 +1,26 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fluent="clr-namespace:FluentMAUI.UI;assembly=FluentMAUI.UI"
              xmlns:local="clr-namespace:MacDynamicDesktop"
              x:Class="MacDynamicDesktop.App">
+    
     <Application.Resources>
+        
         <ResourceDictionary>
+            
             <ResourceDictionary.MergedDictionaries>
+                
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+
+                <!-- add this line for FluentMAUI.UI Styles-->
+                <fluent:FluentStyles />
+                
             </ResourceDictionary.MergedDictionaries>
+            
         </ResourceDictionary>
+        
     </Application.Resources>
+    
 </Application>
